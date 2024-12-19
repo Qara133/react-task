@@ -11,9 +11,24 @@ function Container({ setBasketActive, basket, setBasket }) {
   const [cartList, setCartList] = useState([]);
   const [list, setList] = useState([]);
   const url = `https://api.themoviedb.org/3/discover/movie`;
+  const searchUrl =
+    "https://api.themoviedb.org/3/search/movie?include_adult=false&language=en-US";
+
   const getSearch = (search) => {
     setSearchParams(search);
+    axios
+      .get(search === "" ? url : `${searchUrl}&query=${search}`, {
+        headers: {
+          Authorization:
+            "Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIxMTM5MmU4MDk3NzU4NGYzOWIzYWY5ZjZjNWEwZTRhNyIsIm5iZiI6MTcwMTUxNDg4MC42NzI5OTk5LCJzdWIiOiI2NTZiMGU4MDg4MDU1MTAwYzY4MDdjODUiLCJzY29wZXMiOlsiYXBpX3JlYWQiXSwidmVyc2lvbiI6MX0.CnxGT8GHBEJXwg5zZVdMFJXiacJR2DzR8pkeBfLXg5E",
+          Accept: "application/json",
+        },
+      })
+      .then((res) => {
+        setMovies(res.data.results);
+      });
   };
+
 
   console.log(basket);
 
