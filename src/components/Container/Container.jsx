@@ -37,7 +37,7 @@ function Container({ setBasketActive, basket, setBasket }) {
       .get(url, {
         headers: {
           Authorization:
-            "Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiJiNzgyZTE2OWE2YTM4MTgzY2VjMzIyOGU2ODAyMGNlNCIsIm5iZiI6MTczNDU0OTI5Mi42NDk5OTk5LCJzdWIiOiI2NzYzMWYyYzY3Yzk2MzIxODA0YTMzMmYiLCJzY29wZXMiOlsiYXBpX3JlYWQiXSwidmVyc2lvbiI6MX0.VadvJRK3oKcc-V3Hcungn2mVd4biXCBNO6RZiYvAy_c",
+            "Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIxMTM5MmU4MDk3NzU4NGYzOWIzYWY5ZjZjNWEwZTRhNyIsIm5iZiI6MTcwMTUxNDg4MC42NzI5OTk5LCJzdWIiOiI2NTZiMGU4MDg4MDU1MTAwYzY4MDdjODUiLCJzY29wZXMiOlsiYXBpX3JlYWQiXSwidmVyc2lvbiI6MX0.CnxGT8GHBEJXwg5zZVdMFJXiacJR2DzR8pkeBfLXg5E",
           Accept: "application/json",
         },
       })
